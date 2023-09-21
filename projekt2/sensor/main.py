@@ -7,7 +7,7 @@ import ujson
 with open("config.json", "r") as config_file:
     config = ujson.load(config_file)
 
-uart = machine.UART(0, baudrate=115200)
+uart = machine.UART(0, baudrate=9600)
 uart.init(tx=0, rx=1)
 
 ow = onewire.OneWire(machine.Pin(config["pin"]))
