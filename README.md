@@ -39,6 +39,7 @@ $ Copy code
 $ git clone https://github.com/din-användarnamn/projekt-temperatursensor.git
 
 Gå in i projektmappen:
+
 $ bash
 
 $ Copy code
