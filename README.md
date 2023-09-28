@@ -38,30 +38,31 @@ Installation
 
 Klona detta GitHub-repo till din Raspberry Pi Zero:
 
-$ bash
+    $ bash
 
-$ Copy code
+    $ Copy code
 
-$ git clone https://github.com/din-användarnamn/projekt-temperatursensor.git
+    $ git clone https://github.com/din-användarnamn/projekt-temperatursensor.git
 
 Gå in i projektmappen:
 
-$ bash
+    $ bash
 
-$ Copy code
+    $ Copy code
 
-$ cd projekt-temperatursensor
+    $ cd projekt-temperatursensor
 
 Följ anvisningarna i sensor-mappen för att konfigurera Raspberry Pi Pico.
 
 
 Användning
 
-När projektet är korrekt konfigurerat kan du använda det enligt följande:
+    När projektet är korrekt konfigurerat kan du använda det enligt följande:
 
-Raspberry Pi Pico kommer att regelbundet mäta temperatur och skicka data via UART.
+    Raspberry Pi Pico kommer att regelbundet mäta temperatur och skicka data via UART.
 
 
 Konfiguration:
 
-Anpassa konfigurationsfiler i sensor och hub-mapparna enligt dina behov. Se respektive README-filer för detaljerad information om konfiguration.
+    Anpassa konfigurationsfiler i sensor och hub-mapparna enligt dina behov. Se respektive README-filer för detaljerad information om 
+    konfiguration.
