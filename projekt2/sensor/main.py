@@ -4,31 +4,38 @@ import ds18x20
 import ujson
 import utime
 
-# Läs konfigurationsfil
+# Read configuration file
 with open('config.json', 'r') as config_file:
     config = ujson.load(config_file)
 
+# Create a OneWire bus
+ds_bus = onewire.OneWire(machine.Pin(config["pin"]))
 
-# Skapa en OneWire-bus och DS18X20-sensor
-ds_pin = machine.Pin(config["sensor_pin"])
-ds_bus = onewire.OneWire(ds_pin)
+# Create a DS18X20 sensor for the bus
 ds_sensor = ds18x20.DS18X20(ds_bus)
-
+# Get the hardware ID (unique identifier)
+hardware_id = machine.unique_id()
+hardware_id_str = ''.join(['{:02X}'.format(byte) for byte in hardware_id])
 
 while True:
-    # Starta mätning
-    ds_sensor.convert_temp()
+    # Scan for DS18B20 sensors on the bus
+    sensor_ids = ds_sensor.scan()
+    utime.sleep(1)  # Adjust the sleep time based on your sensor's conversion time
+    for sensor_id in sensor_ids:
+        # Set the OneWire bus address to the current sensor's address
+        ds_bus.addr = sensor_id
 
-    # Vänta på att mätningen ska bli klar
-    utime.sleep_ms(750)
+        # Start temperature measurement
+        ds_sensor.convert_temp()
 
-    # Läs temperaturen från sensorn
-    temperature = ds_sensor.read_temp(ds_sensor.scan()[0])
+        # Wait for the measurement to complete
+        utime.sleep_ms(750)  # Adjust the sleep time based on your sensor's conversion time
 
-    # Skicka temperaturen över UART
-    print("pin: ", config["sensor_pin"])
-    print("Sensor ID: {}\nTemperature: {:.2f}°C\n".format(config["sensor_id"], temperature))
+        # Read the temperature from the sensor
+        temperature = ds_sensor.read_temp(sensor_id)
 
+        # Convert the sensor_id bytearray to a readable hexadecimal string
+        sensor_id_str = ''.join(['{:02X}'.format(byte) for byte in sensor_id])
 
-    # Vänta enligt mätningsintervallet
-    utime.sleep(config["measurement_interval"])
+        # Print the message in the specified format
+        print("{} {} {:.2f}".format(hardware_id_str, sensor_id_str, temperature))
