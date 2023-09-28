@@ -1,68 +1,46 @@
-Projekt: Temperatursensor med Raspberry Pi Pico
-
-   Detta projekt syftar till att skapa en temperaturövervakningslösning med två komponenter: en Raspberry Pi Pico som mäter temperatur och 
-   skickar data via UART.
+Temperaturmätning med Raspberry Pi Pico (G-delen)
+Detta är ett projekt där en Raspberry Pi Pico används för att mäta temperatur med en DS18B20-sensor och skicka den avlästa temperaturen via UART-kommunikation. Följ dessa instruktioner för att konfigurera och använda systemet.
 
 
-Innehållsförteckning:
-
+Innehållsförteckning
  * Krav
- * Funktionalitet
  * Installation
  * Användning
  * Konfiguration
+ * Bidrag
 
 
 Krav
 
-För att köra detta projekt behöver du följande hårdvarukomponenter:
+För att använda projektet behöver du följande komponenter och programvara:
 
- * En Raspberry Pi Pico med MicroPython
- * En eller flera DS18B20 temperatursensorer
- * En 4.7kOhm resistor
- * Kopplingsplatta och kopplingstrådar
- * En USB-kabel för Raspberry Pi Pico
-
-
-Funktionalitet
-Raspberry Pi Pico:
-
- * Läser temperatur från DS18B20-sensor regelbundet.
- * Rapporterar temperaturdata över UART med angivet protokoll.
- * Använder energisparande åtgärder mellan mätningarna.
- * Använder en konfigurationsfil för att hantera inställningar.
-
+ * Raspberry Pi Pico
+ * DS18B20 temperatursensor
+ * En dator med MicroPython och Thonny IDE installerat
+ * UART-kommunikation mellan Raspberry Pi Pico och en annan enhet (t.ex. en dator)
 
 
 Installation
 
-Klona detta GitHub-repo till din Raspberry Pi Zero:
+Följ dessa steg för att installera och konfigurera projektet:
 
-    $ bash
 
-    $ Copy code
+Anslut DS18B20-sensorn: Anslut DS18B20-sensorn till Raspberry Pi Pico enligt tillverkarens anvisningar.
 
-    $ git clone https://github.com/din-användarnamn/projekt-temperatursensor.git
+Ladda upp MicroPython: Använd Thonny IDE för att ladda upp MicroPython-firmware till Raspberry Pi Pico. Du kan hitta detaljerade instruktioner om hur du gör detta på Raspberry Pi Pico webbplats.
 
-Gå in i projektmappen:
+Kopiera koden: Kopiera innehållet från sensor/main.py-filen i detta projekt till din Raspberry Pi Pico. Du kan använda Thonny IDE för att skapa en ny Python-fil och klistra in koden där.
 
-    $ bash
-
-    $ Copy code
-
-    $ cd projekt-temperatursensor
-
-Följ anvisningarna i sensor-mappen för att konfigurera Raspberry Pi Pico.
-
+Anslut till UART: Anslut Raspberry Pi Pico till din dator via UART (Universal Asynchronous Receiver-Transmitter) för att övervaka seriell kommunikation och visa temperaturen som läses från sensorn. Använd ett terminalprogram som PuTTY (Windows) eller minicom (Linux) och ställ in rätt serieport och baudrate.
 
 Användning
 
-    När projektet är korrekt konfigurerat kan du använda det enligt följande:
+När du har installerat och konfigurerat projektet kan du använda det på följande sätt:
 
-    Raspberry Pi Pico kommer att regelbundet mäta temperatur och skicka data via UART.
+ * Raspberry Pi Pico kommer att regelbundet mäta temperaturen från DS18B20-sensorn.
+ * Temperaturen kommer att skickas över UART och visas i ditt terminalprogram.
+ * Om du vill anpassa mätintervallen eller andra inställningar, redigera koden i main.py-filen enligt dina behov.
 
+Konfiguration
 
-Konfiguration:
-
-    Anpassa konfigurationsfilen i sensor mappen enligt dina behov. Se respektive README-filer för detaljerad information om 
-    konfiguration.
+Du kan anpassa projektet genom att redigera koden i main.py-filen på Raspberry Pi Pico. Ändra mätintervall, lägg till fler sensorer eller ändra UART-inställningar enligt dina specifika krav.
