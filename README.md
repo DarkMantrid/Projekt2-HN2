@@ -56,6 +56,7 @@ Följ anvisningarna i sensor-mappen för att konfigurera Raspberry Pi Pico.
 
 
 Användning
+
 När projektet är korrekt konfigurerat kan du använda det enligt följande:
 
 Raspberry Pi Pico kommer att regelbundet mäta temperatur och skicka data via UART.
