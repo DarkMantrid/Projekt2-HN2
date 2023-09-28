@@ -33,6 +33,7 @@ Raspberry Pi Pico:
  * Använder en konfigurationsfil för att hantera inställningar.
 
 
+
 Installation
 
 Klona detta GitHub-repo till din Raspberry Pi Zero:
