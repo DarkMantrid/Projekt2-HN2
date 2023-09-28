@@ -8,9 +8,6 @@ import utime
 with open('config.json', 'r') as config_file:
     config = ujson.load(config_file)
 
-# Konfigurera UART
-# uart = machine.UART(config["uart_port"], baudrate=config["baud_rate"])
-
 
 # Skapa en OneWire-bus och DS18X20-sensor
 ds_pin = machine.Pin(config["sensor_pin"])
@@ -29,7 +26,6 @@ while True:
     temperature = ds_sensor.read_temp(ds_sensor.scan()[0])
 
     # Skicka temperaturen över UART
-    #uart.write("Sensor ID: {}\nTemperature: {:.2f}°C\n".format(config["sensor_id"], temperature))
     print("pin: ", config["sensor_pin"])
     print("Sensor ID: {}\nTemperature: {:.2f}°C\n".format(config["sensor_id"], temperature))
 
