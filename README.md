@@ -13,6 +13,7 @@ Innehållsförteckning:
 
 
 Krav
+
 För att köra detta projekt behöver du följande hårdvarukomponenter:
 
  * En Raspberry Pi Pico med MicroPython
@@ -30,6 +31,7 @@ Raspberry Pi Pico:
  * Använder en konfigurationsfil för att hantera inställningar.
 
 Installation
+
 Klona detta GitHub-repo till din Raspberry Pi Zero:
 
 $ bash
