@@ -33,12 +33,18 @@ Installation
 Klona detta GitHub-repo till din Raspberry Pi Zero:
 
 $ bash
+
 $ Copy code
+
 $ git clone https://github.com/din-användarnamn/projekt-temperatursensor.git
+
 Gå in i projektmappen:
 $ bash
+
 $ Copy code
+
 $ cd projekt-temperatursensor
+
 Följ anvisningarna i sensor-mappen för att konfigurera Raspberry Pi Pico.
 
 
