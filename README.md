@@ -21,17 +21,20 @@ För att använda projektet behöver du följande komponenter och programvara:
 
 
 Installation
-
 Följ dessa steg för att installera och konfigurera projektet:
 
+ * Anslut DS18B20-sensorn: Anslut DS18B20-sensorn till Raspberry Pi Pico enligt tillverkarens anvisningar.
+  
+ * Ladda upp MicroPython: Använd Thonny IDE för att ladda upp MicroPython-firmware till Raspberry Pi Pico. Du kan hitta detaljerade 
+   instruktioner om hur du gör detta på Raspberry Pi Pico webbplats.
 
-Anslut DS18B20-sensorn: Anslut DS18B20-sensorn till Raspberry Pi Pico enligt tillverkarens anvisningar.
+ * Kopiera koden: Kopiera innehållet från sensor/main.py-filen i detta projekt till din Raspberry Pi Pico. Du kan använda Thonny IDE för att 
+   skapa en ny Python-fil och klistra in koden där.
 
-Ladda upp MicroPython: Använd Thonny IDE för att ladda upp MicroPython-firmware till Raspberry Pi Pico. Du kan hitta detaljerade instruktioner om hur du gör detta på Raspberry Pi Pico webbplats.
+ * Anslut till UART: Anslut Raspberry Pi Pico till din dator via UART (Universal Asynchronous Receiver-Transmitter) för att övervaka seriell 
+   kommunikation och visa temperaturen som läses från sensorn. Använd ett terminalprogram som PuTTY (Windows) eller minicom (Linux) och ställ 
+   in rätt serieport och baudrate.
 
-Kopiera koden: Kopiera innehållet från sensor/main.py-filen i detta projekt till din Raspberry Pi Pico. Du kan använda Thonny IDE för att skapa en ny Python-fil och klistra in koden där.
-
-Anslut till UART: Anslut Raspberry Pi Pico till din dator via UART (Universal Asynchronous Receiver-Transmitter) för att övervaka seriell kommunikation och visa temperaturen som läses från sensorn. Använd ett terminalprogram som PuTTY (Windows) eller minicom (Linux) och ställ in rätt serieport och baudrate.
 
 Användning
 
