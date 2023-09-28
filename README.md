@@ -3,6 +3,7 @@ Projekt: Temperatursensor med Raspberry Pi Pico
    Detta projekt syftar till att skapa en temperaturövervakningslösning med två komponenter: en Raspberry Pi Pico som mäter temperatur och 
    skickar data via UART.
 
+
 Innehållsförteckning:
 
  * Krav
@@ -22,6 +23,7 @@ För att köra detta projekt behöver du följande hårdvarukomponenter:
  * Kopplingsplatta och kopplingstrådar
  * En USB-kabel för Raspberry Pi Pico
 
+
 Funktionalitet
 Raspberry Pi Pico:
 
@@ -29,6 +31,7 @@ Raspberry Pi Pico:
  * Rapporterar temperaturdata över UART med angivet protokoll.
  * Använder energisparande åtgärder mellan mätningarna.
  * Använder en konfigurationsfil för att hantera inställningar.
+
 
 Installation
 
