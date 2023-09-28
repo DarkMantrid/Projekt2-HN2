@@ -64,5 +64,5 @@ Användning
 
 Konfiguration:
 
-    Anpassa konfigurationsfiler i sensor mappen enligt dina behov. Se respektive README-filer för detaljerad information om 
+    Anpassa konfigurationsfilen i sensor mappen enligt dina behov. Se respektive README-filer för detaljerad information om 
     konfiguration.
