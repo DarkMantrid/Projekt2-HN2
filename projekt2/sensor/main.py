@@ -20,7 +20,7 @@ hardware_id_str = ''.join(['{:02X}'.format(byte) for byte in hardware_id])
 while True:
     # Scan for DS18B20 sensors on the bus
     sensor_ids = ds_sensor.scan()
-    utime.sleep(1)  # Adjust the sleep time based on your sensor's conversion time
+    utime.sleep(10)  # Adjust the sleep time based on your sensor's conversion time
     for sensor_id in sensor_ids:
         # Set the OneWire bus address to the current sensor's address
         ds_bus.addr = sensor_id
