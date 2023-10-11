@@ -1,4 +1,4 @@
 {
     "pin": 16,
-    "measurement_interval": 10
+    "measurement_interval": 60
 }
